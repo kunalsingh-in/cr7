@@ -1,35 +1,143 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <title> Movies - K S 7 Football</title>
-        <style>
-            *{
-                background: #3a3b3c;
-            }
-           #Home1{
-            color: rgb(255, 255, 255);
-            list-style-type: none;
-            font-size: 35px;
-            text-align: right;
-        }
-        #Home1 ul li{
-            text-decoration: none;
-            list-style-type: none;
-            text-align: right;
-        } 
-        </style>
-    </head>
-</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <style>
+    body {
+  min-width: 800px;
+  background: #ff00cc;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #333399, #ff00cc);  /* Chrome 10-25, Safari 5.1-6 */
+background: #000; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin:0px;
+}
+/* Style the navigation menu */
+.navbar {
+  width: 100%;
+  background-color: #000;
+  overflow: auto;
+  margin-bottom: 10%;
+}
+
+/* Navigation links */
+.navbar a {
+  float: left;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 20%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+  text-align: center; /* If you want the text to be centered */
+}
+
+/* Add a background color on mouse-over */
+.navbar a:hover {
+  background-color: rgb(151, 151, 151);
+}
+
+/* Style the current/active link */
+.navbar a.active {
+  background-color: #555;
+}
+
+section  {
+  margin:0em 10em 10em 10em;
+  padding:3em 10em 3em 10em;
+}
+
+h1{
+  color: #111; 
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-size: 200px; 
+  font-weight: bold; 
+  letter-spacing: -1px; 
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  color: #111; 
+  font-family: 'Calibri', sans-serif; 
+  font-size: 25px; 
+  line-height: 1.5;
+}
+
+hr {
+  background-color: #000;
+}
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px)
+{
+ .responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+ }
+ navbar a:hover {
+  background-color: rgb(151, 151, 151);
+}
+}
+    </style>
+</head>
 <body>
-    <nav>
-        <ul>
-            <li><a id="Home1" href="index.html"><i class="fa-solid fa-house"></i></a></li>
-        </ul>
-    </nav>
-    <h1 style="color:rgb(255, 255, 255);">Ronaldo (2015) Hindi Dubbed -</h1>
-    </body>
-<video width="1180" height="540" controls>
-    <source src="Ronaldo (2015) Hindi Dubbed.mp4" type="video/mp4">
-    <source src="movie.ogg" type="video/ogg">
-  Your browser does not support the video tag.
-  </video>
+     <!-- The navigation menu -->
+<div class="navbar">
+  <a href="#">Movies</a>
+  <a href="#">Documentry</a>
+  <a href="#">Interviews</a>
+  <a href="#">Videos</a>
+</div>
+      <div class="container">
+        <iframe class="responsive-iframe" src="https://www.youtube.com/embed/cDVvRQjSwEc"></iframe>
+      </div>
+    <script>
+        $('.expandHome').mouseover(function() {
+  $('.sub-home').css({
+        'display': 'block'
+    }); 
+});
+$('.subnavbtn').mouseover(function() {
+  $('.sub-home').css({
+        'display': 'none'
+    }); 
+});
+
+$('#trapezoid').mouseleave(function() {
+  $('#trapezoid').css({
+        'margin-top': '-53px'
+    }); 
+    $('.sub-home').css({
+        'display': 'none'
+    }); 
+}).mouseenter(function() {
+  $('#trapezoid').css({
+        'margin-top': '0px'
+    }); 
+});
+    </script>
+</body>
+</html>
